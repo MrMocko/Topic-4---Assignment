@@ -8,7 +8,7 @@ namespace Topic_4___Assignment
         {   //Andre
             string  name, firstname, lastname, login;
             int age, grade, id;
-            double money, average;
+            double money, average, num1, num2, num3, num4; 
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Hello. What is your name?");
             name = Console.ReadLine();
@@ -45,8 +45,8 @@ namespace Topic_4___Assignment
             Console.WriteLine("Press Enter to continue");
             Console.ReadLine();
             Console.Clear ();
-            Console.WriteLine("Hello what is your name?" + name);
-            Console.ReadLine();
+            Console.WriteLine("Hello what is your name?");
+            name = Console.ReadLine();
             Console.WriteLine("Hi " + name + "! How old are you? ");
             Int32.TryParse(Console.ReadLine(), out age);
             Console.WriteLine("Did you know that in 5 years you will be " + (age + 5) + (" Years old?!"));
@@ -55,10 +55,23 @@ namespace Topic_4___Assignment
             Console.WriteLine("Press Enter to continue");
             Console.ReadLine();
             Console.Clear ();
+            Console.WriteLine("Hello friends this is calk, and today im'a do some pretty good math. Give me 3 numbers to add together then devide by 2 with ");
+            Console.WriteLine("Enter number 1");
+            Double.TryParse (Console.ReadLine(), out num1);
+            Console.WriteLine("Enter number 2");
+            Double.TryParse(Console.ReadLine(), out num2);
+            Console.WriteLine("Give me the last number now");
+            Double.TryParse(Console.ReadLine(), out num3);
+            Console.WriteLine("Cool man ima do the math now :) ");
+            Console.WriteLine("''CALCULATING ''");
+            Thread.Sleep(2000);
+            num4 = ((num1 + num2 + num3) / 2);
+            Console.WriteLine("The calculated number is = " + num4);
+            Console.WriteLine("Press Enter to continue");
+            Console.ReadLine ();
+            Console.Clear ();
+            Console.WriteLine("Hey man how's it going? Just kidding i dont care, i am going to scan your items now what are they ");
             Console.WriteLine();
-            
-            
-            
         }
     }
 }
