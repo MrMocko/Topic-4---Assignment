@@ -6,9 +6,9 @@ namespace Topic_4___Assignment
     {
         static void Main(string[] args)
         {   //Andre
-            string  name, firstname, lastname, login;
+            string  name, firstname, lastname, login, item1, item2;
             int age, grade, id;
-            double money, average, num1, num2, num3, num4; 
+            double money, average, num1, num2, num3, num4, price1, price2, total; 
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Hello. What is your name?");
             name = Console.ReadLine();
@@ -24,7 +24,7 @@ namespace Topic_4___Assignment
             Console.Clear();
             Console.WriteLine("Please enter your info so i can steal your personal info. :3");
             Thread.Sleep(1000);
-            Console.WriteLine("Enter your firstname");
+            Console.WriteLine("Enter your first name");
             firstname = Console.ReadLine();
             Console.WriteLine("Enter your last name");
             lastname = Console.ReadLine();
@@ -37,11 +37,11 @@ namespace Topic_4___Assignment
             Console.WriteLine("Enter your average");
             double.TryParse (Console.ReadLine(), out average);
 
-            Console.WriteLine("\tLogin : " + login);
-            Console.WriteLine("\tStudent ID : " + id);
-            Console.WriteLine("\tFirst name : " + firstname + " " +lastname);
-            Console.WriteLine("\tYour Average :\t" + average + "%");
-            Console.WriteLine("\tGrade : " + grade);
+            Console.WriteLine("\tLogin: " + login);
+            Console.WriteLine("\tStudent ID: " + id);
+            Console.WriteLine("\tFirst name: " + firstname + " " +lastname);
+            Console.WriteLine("\tYour Average:\t" + average + "%");
+            Console.WriteLine("\tGrade: " + grade);
             Console.WriteLine("Press Enter to continue");
             Console.ReadLine();
             Console.Clear ();
@@ -71,7 +71,21 @@ namespace Topic_4___Assignment
             Console.ReadLine ();
             Console.Clear ();
             Console.WriteLine("Hey man how's it going? Just kidding i dont care, i am going to scan your items now what are they ");
-            Console.WriteLine();
+            Console.Write("Item 1: ");
+            item1 = Console.ReadLine();
+            Console.WriteLine("Ok and item 2?");
+            Console.Write("Item 2: ");
+            item2 = Console.ReadLine();
+            Console.WriteLine("Alright cool is it only " + item1 + " And " + item2);
+            Thread.Sleep(1000);
+            Console.WriteLine("Uhhhhhhhh so how much do they cost again?");
+            Console.Write("Price of " + item1 + ": ");
+            Double.TryParse(Console.ReadLine(), out price1);
+            Console.WriteLine("And item two?");
+            Console.Write("Price of " + item2  + ": ");
+            Double.TryParse(Console.ReadLine (), out price2);
+            total = (price1 + price2);
+            Console.WriteLine("Ok so your total is: " + total.ToString("C"));
         }
     }
 }
