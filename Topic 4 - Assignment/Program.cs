@@ -85,7 +85,26 @@ namespace Topic_4___Assignment
             Console.Write("Price of " + item2  + ": ");
             Double.TryParse(Console.ReadLine (), out price2);
             total = (price1 + price2);
+            
+
+
+
+
             Console.WriteLine("Ok so your total is: " + total.ToString("C"));
+            Console.WriteLine(" Ok your recipt is going to print now. ");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("\t Sales Receipt ");
+            Console.WriteLine("");
+            Console.WriteLine("\t Item 1:\t" + item1);
+            Console.WriteLine("\t Price:\t \t" + price1.ToString("C"));
+            Console.WriteLine("\t Item 2:\t" + item2);
+            Console.WriteLine("\t Price:\t \t" + price2.ToString("C"));
+            Console.WriteLine("\t ===================");
+            Console.WriteLine("\t Total:\t \t  " + total.ToString("C"));
+
         }
     }
 }
