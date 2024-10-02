@@ -6,28 +6,28 @@ namespace Topic_4___Assignment
     {
         static void Main(string[] args)
         {   //Andre
-            string  name, firstname, lastname, login, item1, item2;
+            string  name, firstName, lastName, login, item1, item2;
             int age, grade, id;
-            double money, average, num1, num2, num3, num4, price1, price2, total; 
+            double money, average, num1, num2, num3, num4, price1, price2, total, discount, subtotal, tax, totalOwed; 
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Hello. What is your name?");
             name = Console.ReadLine();
-            Console.WriteLine("Hi there " +  name + (" how old are you again? "));
+            Console.WriteLine("Hi there " +  name + (", how old are you? "));
             Int32.TryParse(Console.ReadLine(), out age);
             Console.WriteLine("So your " + age + (" eh? Thats not old at all! "));
             
-            Console.WriteLine("How much do you make? " + name);
+            Console.WriteLine("How much do you make, " + name + "?" );
             double.TryParse(Console.ReadLine(), out money);
             Console.WriteLine(money .ToString("C") + " I hope thats per hour not per year");
             Console.WriteLine("Press Enter to continue");
             Console.ReadLine();
             Console.Clear();
-            Console.WriteLine("Please enter your info so i can steal your personal info. :3");
+            Console.WriteLine("Please enter your info so I can destroy your life. :3");
             Thread.Sleep(1000);
             Console.WriteLine("Enter your first name");
-            firstname = Console.ReadLine();
+            firstName = Console.ReadLine();
             Console.WriteLine("Enter your last name");
-            lastname = Console.ReadLine();
+            lastName = Console.ReadLine();
             Console.WriteLine("Enter your grade");
             Int32.TryParse (Console.ReadLine(), out grade);
             Console.WriteLine("Enter your student id");
@@ -39,7 +39,7 @@ namespace Topic_4___Assignment
 
             Console.WriteLine("\tLogin: " + login);
             Console.WriteLine("\tStudent ID: " + id);
-            Console.WriteLine("\tFirst name: " + firstname + " " +lastname);
+            Console.WriteLine("\tFirst name: " + firstName + " " +lastName);
             Console.WriteLine("\tYour Average:\t" + average + "%");
             Console.WriteLine("\tGrade: " + grade);
             Console.WriteLine("Press Enter to continue");
@@ -98,12 +98,23 @@ namespace Topic_4___Assignment
             Console.WriteLine("");
             Console.WriteLine("\t Sales Receipt ");
             Console.WriteLine("");
-            Console.WriteLine("\t Item 1:\t" + item1);
-            Console.WriteLine("\t Price:\t \t" + price1.ToString("C"));
-            Console.WriteLine("\t Item 2:\t" + item2);
-            Console.WriteLine("\t Price:\t \t" + price2.ToString("C"));
-            Console.WriteLine("\t ===================");
-            Console.WriteLine("\t Total:\t \t  " + total.ToString("C"));
+            Console.WriteLine("\t Item 1:\t \t" + item1);
+            Console.WriteLine("\t Price:\t \t \t" + price1.ToString("C"));
+            Console.WriteLine("\t Item 2:\t \t" + item2);
+            Console.WriteLine("\t Price:\t \t \t" + price2.ToString("C"));
+            Console.WriteLine("\t ===========================");
+            Console.WriteLine("\t Total:\t \t \t" + total.ToString("C"));
+            discount = (total * 0.8);
+            Console.WriteLine("\t Discount (20%):\t" + discount.ToString("C"));
+            subtotal = (total - discount);
+            Console.WriteLine("\t Subtotal:\t \t" + subtotal.ToString("C"));
+            tax = (0.13 * total);
+            Console.WriteLine("\t Tax:\t \t" + tax.ToString("C"));
+            Console.WriteLine("\t ===========================");
+            totalOwed = ( subtotal + tax);
+            Console.WriteLine("\t Total owed:\t \t" + totalOwed.ToString("C"));
+
+
 
         }
     }
