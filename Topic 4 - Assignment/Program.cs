@@ -39,9 +39,10 @@ namespace Topic_4___Assignment
 
             Console.WriteLine("\tLogin: " + login);
             Console.WriteLine("\tStudent ID: " + id);
-            Console.WriteLine("\tFirst name: " + firstName + " " +lastName);
-            Console.WriteLine("\tYour Average:\t" + average + "%");
+            Console.WriteLine("\tName: " + firstName + " " +lastName);
+            Console.WriteLine("\tYour Average:" + average + "%");
             Console.WriteLine("\tGrade: " + grade);
+            Console.WriteLine();
             Console.WriteLine("Press Enter to continue");
             Console.ReadLine();
             Console.Clear ();
@@ -96,23 +97,26 @@ namespace Topic_4___Assignment
             Console.WriteLine("");
             Console.WriteLine("");
             Console.WriteLine("");
-            Console.WriteLine("\t Sales Receipt ");
-            Console.WriteLine("");
-            Console.WriteLine("\t Item 1:\t \t" + item1);
-            Console.WriteLine("\t Price:\t \t \t" + price1.ToString("C"));
-            Console.WriteLine("\t Item 2:\t \t" + item2);
-            Console.WriteLine("\t Price:\t \t \t" + price2.ToString("C"));
-            Console.WriteLine("\t ===========================");
-            Console.WriteLine("\t Total:\t \t \t" + total.ToString("C"));
+            Console.WriteLine("\t  ______________________________ ");
+            Console.WriteLine("\t |Sales Receipt " + "\t\t|");
+            Console.WriteLine("\t |" + "\t\t\t\t|");
+            Console.WriteLine("\t |Item 1:\t \t" + item1 + "\t|");
+            Console.WriteLine("\t |Price:\t \t" + price1.ToString("C") + "\t|");
+            Console.WriteLine("\t |Item 2:\t \t" + item2 + "\t|");
+            Console.WriteLine("\t |Price:\t \t" + price2.ToString("C") + "\t|");
+            Console.WriteLine("\t |===========================" + "\t|" );
+            Console.WriteLine("\t |Total:\t \t" + total.ToString("C") + "\t|");
             discount = (total * 0.8);
-            Console.WriteLine("\t Discount (20%):\t" + discount.ToString("C"));
+            Console.WriteLine("\t |Discount (20%):\t" + discount.ToString("C") + "\t|");
             subtotal = (total - discount);
-            Console.WriteLine("\t Subtotal:\t \t" + subtotal.ToString("C"));
+            Console.WriteLine("\t |Subtotal:\t \t" + subtotal.ToString("C") + "\t|");
             tax = (0.13 * total);
-            Console.WriteLine("\t Tax:\t \t" + tax.ToString("C"));
-            Console.WriteLine("\t ===========================");
+            Console.WriteLine("\t |Tax:\t \t \t" + tax.ToString("C") + "\t|");
+            Console.WriteLine("\t |===========================" + "\t|" );
             totalOwed = ( subtotal + tax);
-            Console.WriteLine("\t Total owed:\t \t" + totalOwed.ToString("C"));
+            Console.WriteLine("\t |Total owed:\t \t" + totalOwed.ToString("C") + "\t|");
+            Console.WriteLine("\t |______________________________|");
+            Console.ReadLine();
 
 
 
